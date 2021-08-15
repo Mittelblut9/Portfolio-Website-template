@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('loading/loading.css');
+
+* {
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bluebackground: #657ED4;
+    --bluenavbarbackground: #3626A7;
+    --background: #ffffff;
+    --mainfontcolor: #000000;
+    --nochangefontcolor: #ffffff;
+    --mainboxshadow: 9px 3px 27px #0D0106;
+    --maindropshadow: drop-shadow(9px 3px 27px #0D0106)
+}
+
+body {
+    margin: 0;
+    background: var(--bluebackground);
+    overflow-x: hidden;
+
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+img {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.wrapper {
+    clear: both;
+    margin: 0px;
+    padding: 0px;
+}
+
+.main_startseite {
+    width: 50%;
+}
+
+.col {
+    display: block;
+    float: left;
+    margin: 0 0 0 10%;
+}
+
+.col:first-child {
+    margin-left: 0 !important;
+}
+
+/* Grid */
+.grid_1_of_3 {
+    width: 10%
+}
+
+.grid_2_of_3 {
+    width: 40%
+}
+
+.grid_3_of_3 {
+    width: 40%
+}
+
+.mainsection {
+    color: var(--nochangefontcolor);
+}
+
+.mainsection header {
+    margin-top: -50px;
+    width: 500px;
+    white-space: pre-line;
+    font-size: 3vw;
+    text-transform: uppercase;
+}
+
+body > div.wrapper > section.mainsection.col.grid_2_of_3 > div.site.site-3.animate__faster > header > h1 > span {
+    display: none
+}
+
+.mainsection header h1:after {
+    content: '';
+    display: block;
+    width: 400px;
+    height: 3px;
+    margin: 50px 0 -50px 0;
+    background: white;
+}
+
+.info_text {
+    font-size: 1.5em;
+}
+
+.handbuch_closed_home {
+    width: 400px;
+    margin: 150px 150px 0 0;
+    filter: var(--maindropshadow);
+}
+
+.handbuch_open_handbuch {
+    width: 600px;
+    margin: 150px 100px 0 0;
+    filter: var(--maindropshadow);
+}
+
+.movebuttons {
+    display: flex;
+    margin: 50px 0 0 -22px;
+}
+
+.moveback,
+.moveforward {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    font-weight: 700;
+    margin: 20px 50px 20px 20px;
+    height: 42px;
+    width: 249px;
+    background: white;
+    border-radius: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.leseproben_iframes iframe {
+    display: block;
+    margin: 150px auto;
+    height: 70vh;
+    width: 700px;
+    overflow: hidden;
+}
+
+.more_leseproben_txt h1 {
+    font-size: 4vw;
+}
+
+.more_leseproben_txt h2 {
+    text-decoration: underline;
+}
+
+.more_leseproben_txt {
+    padding: 0 50px 0 0;
+    pointer-events: none;
+}
+
+.more_leseproben_txt h1::after {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    height: 2px;
+    background: white;
+    width: 50%;
+}
+
+.more_leseproben_txt ul li{
+    list-style-type: upper-alpha;
+    
+    line-height: 29px;
+}
+
+.more_leseproben_txt ul ul li {
+    list-style-type: lower-alpha;
+}
+
+.leseproben_links p,
+.more_leseproben_links p {
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+#handbuch_leseproben_active {
+    color: red;
+}
+
+
+.author_pics {
+    width: 200px;
+}
+
+.author_pics div {
+    transition: all .1s;
+    border-bottom: 0px solid white;
+}
+
+.author_pics div:hover {
+    border-bottom: 4px solid white;
+}
+
+.author_radtke,
+.author_pisani,
+.author_wolters {
+    margin: 20px 0;
+    height: 110px;
+    width: 110px;
+}
+
+.atactive.author_radtke::after,
+.atactive.author_pisani::after,
+.atactive.author_wolters::after {
+    transform: translate(110px, 10px);
+}
+
+.atactive.author_radtke,
+.atactive.author_pisani,
+.atactive.author_wolters {
+    border-bottom: 4px solid white;
+}
+
+.author_radtke::after,
+.author_pisani::after,
+.author_wolters::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    transform: translate(0, 10px);
+    /*110px*/
+    border-style: solid;
+    border-width: 20px 0 20px 50px;
+    border-color: transparent transparent transparent #ffffff;
+    transition: all .5s;
+    z-index: -1;
+}
+
+.author_radtke {
+    background: url('../img/Handbuch/Autorinnen/radtke.jpg') no-repeat center;
+}
+
+.author_pisani {
+    background: url('../img/Handbuch/Autorinnen/pisani.jpg') no-repeat center;
+}
+
+.author_wolters {
+    background: url('../img/Handbuch/Autorinnen/wolters.jpg') no-repeat center;
+}
+
+
+.autorinnen_sec header {
+    font-size: 2em;
+}
+
+.autorinnen_sec a {
+    color: rgb(238, 0, 0);
+}
+
+.at_show {
+    display: block !important;
+}
+
+.autorinnen_sec div,
+.autorinnen_sec div,
+.autorinnen_sec div {
+    margin: 290px auto;
+}
+
+/*!ERROR!*/
+.error {
+    position: fixed;
+    z-index: 99999;
+    top: -200px;
+    right: 50px;
+    background: red;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: var(--mainboxshadow);
+    transition: 0.5s ease-in-out;
+    user-select: none;
+}
+
+.error img {
+    margin: 0 100px;
+}
+
+.error p {
+    padding: 5px 20px 10px 20px;
+}
+
+.error p::before {
+    content: url('https://img.icons8.com/color/48/000000/error--v1.png');
+    display: flex;
+    justify-content: center;
+    margin: 0 0 20px 0;
+}
+
+.error p::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -15px;
+    width: 100px;
+    height: 2px;
+    background: white;
+}
+
+/*!!*/

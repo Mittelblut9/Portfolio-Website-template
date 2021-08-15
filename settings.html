@@ -1,0 +1,216 @@
+<!--
+    
+    *   Idee und geschrieben von BlackDayz
+    *   
+    *   Copyright 2021 BlackDayz
+    *   
+    *   Das Verändern und Kopieren der Website ist nicht gestattet!
+    *   
+    *   Anfragen an produce@blackdayz.de oder über Social Media (Instagram) @blackdayz_de
+    *   
+    *   www.blackdayz.de
+    *   
+    ***BlackDayz | Video Creator und Entwickler***
+    
+-->
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html lang="de">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Einsellungen | Visuelle Mediengestaltung</title>
+        <meta name="copyright" content="BlackDayz &copy; 2021" />
+        <meta name="author" content="BlackDayz &copy;" />
+        <meta name="robots" content="index, follow" />
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="shortcut icon" href="https://www.blackdayz.de/src/img/logo/shortcuticon.png" />
+        <link rel="apple-touch-icon" href="https://www.blackdayz.de/src/img/logo/shortcuticon.png" />
+
+        <link rel="stylesheet" href="src/css/main.css" />
+        <link rel="stylesheet" href="src/css/nav.css" />
+        <link rel="stylesheet" href="src/css/settings/settings.css" />
+        <link rel="stylesheet" href="src/css/media/media.css" />
+        <link rel="stylesheet" href="https://www.blackdayz.de/Libary/CSS/V0_0_1/BlackCSS.css" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <noscript class="center white font bold big absolute">
+            <span class="absolute">Um den vollen Funktionsumfang dieser Webseite zu erfahren, benötigen Sie JavaScript.
+                Hier finden Sie die <a href="https://www.enable-javascript.com/de/" class="italic">Anleitung wie Sie
+                    JavaScript in Ihrem Browser einschalten.</a></span>
+        </noscript>
+
+        <div class="loader" id="loading">
+            <div class="lds-ellipsis">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+
+        <div class="wrapper">
+
+            <!--! NAV SECTION !-->
+            <section>
+                <nav class="left mainnav">
+                    <label for="burgermenu"><img src="https://img.icons8.com/fluent/48/000000/menu--v2.png" /></label>
+                    <input type="checkbox" id="burgermenu" />
+                    <a href="index.html" rel="noopener"><img
+                            src="https://img.icons8.com/color/48/000000/home.png" /><span>Home</span></a>
+                    <a href="handbuch.html" rel="noopener"><img
+                            src="https://img.icons8.com/color/48/000000/story-book.png" /><span>Handbuch</span></a>
+                    <a href="#" rel="noopener"><img
+                            src="https://img.icons8.com/color/48/000000/meeting-room.png" /><span>Education</span></a>
+                    <a href="settings.html" rel="noopener">
+                        <img src="https://img.icons8.com/color/50/000000/settings.png" /><span>Settings</span>
+                    </a>
+                </nav>
+            </section>
+            <!--!!-->
+
+            <section class="settings left">
+                <header>
+                    <h1><img src="https://img.icons8.com/clouds/300/000000/settings.png" /></h1>
+                </header>
+                <nav class="settingsnav white">
+                    <p id="st-allgemein">Allgemein</p>
+                    <p id="st-cookies">Cookies</p>
+                    <p id="design-cookies">Design</p>
+                </nav>
+            </section>
+
+            <section class="settings_detail left">
+                <header id="settings_name" class="center">
+                    <span>Allgemein</span>
+                    <hr />
+                </header>
+                <main>
+                    <div id="settings_allgemein">
+                        <div class="setting">
+                            <span class="left setting_name">"Last-Visit" -
+                                <span class="tiny">Die zuletzt aufgerufene Seite
+                                    wird gespeichert. Beim erneuten Aufrufen der Webseite kommen Sie direkt auf diese
+                                    Seite
+                                    zurück.</span><span class="red bold">[Noch nicht
+                                    verfügbar]</span>
+                            </span>
+                            <div class="mode_switcher right">
+                                <label class="switch">
+                                    <input type="checkbox" id="lastvisit-on-off">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="setting">
+                            <span class="left setting_name">Fehlermeldung aktivieren</span>
+                            <div class="mode_switcher right">
+                                <label class="switch">
+                                    <input type="checkbox" id="errormessage-on-off">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="setting">
+                            <span class="left setting_name">JavaScript Animationen</span>
+                            <div class="mode_switcher right">
+                                <label class="switch">
+                                    <input type="checkbox" id="animations-on-off">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="settings_cookies">
+                        <div class="setting">
+                            <span class="left setting_name">Cookies On/Off</span>
+                            <div class="mode_switcher right">
+                                <label class="switch">
+                                    <input type="checkbox" id="cookies-on-off">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="setting">
+                            <span class="left setting_name">Notwendige Cookies</span>
+                            <div class="mode_switcher right">
+                                <label class="switch">
+                                    <input type="checkbox" id="essentiellecookies-on-off">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="setting">
+                            <span class="left setting_name">Statistische Cookies</span>
+                            <div class="mode_switcher right">
+                                <label class="switch">
+                                    <input type="checkbox" id="statistischecookies-on-off">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="setting">
+                            <span class="left setting_name">Marketing/Social Media Cookies</span>
+                            <div class="mode_switcher right">
+                                <label class="switch">
+                                    <input type="checkbox" id="mworsmcookies-on-off">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="settings_design">
+                        <div class="setting">
+                            <span class="left setting_name">Dark Mode</span>
+                            <div class="mode_switcher right">
+                                <label class="switch">
+                                    <input type="checkbox" id="darkmode-on-off">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </section>
+        </div>
+
+        <!--!ERROR MESSAGE!-->
+        <div id="error" class="error">
+            <p id="errormessage" class="white"></p>
+        </div>
+        <!--!!-->
+
+        <!--!BOTTOM RIGHT NAVIGATION!-->
+        <section>
+            <nav class="secondnav fixed bg_white">
+                <span><img src="https://img.icons8.com/material-outlined/48/000000/expand-arrow--v1.png" /></span>
+                <span><a href="other/legal/Datenschutz.html" rel="noopner noreferrer"><img src="https://img.icons8.com/dusk/64/000000/privacy.png"/></a></span>
+                <span><a href="other/legal/Impressum.html" rel="noopner noreferrer"><img src="https://img.icons8.com/ios-filled/50/000000/section.png" /></a></span>
+            </nav>
+        </section>
+        <!--!!-->
+
+        <script src="src/js/main.js" defer type="module"></script>
+    </body>
+
+</html>

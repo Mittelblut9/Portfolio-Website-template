@@ -1,0 +1,130 @@
+.settings,.settings_detail {
+	width: 50%;
+}
+
+.settings header {
+    height: 10%;
+    width: 100%;
+    display: inline-flex;
+	justify-content: center;
+}
+
+.settings header img {
+    width: 300px;
+}
+
+.settingsnav p {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    font-size: 1.4em;
+    font-weight: 900;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.settingsnav p:hover {
+    box-shadow: var(--mainboxshadow);
+}
+
+.settings_detail {
+    padding: 200px 0 0 50px;
+	background: var(--background);
+	height: 100vh;
+}
+
+.settings_detail main {
+	padding: 50px;
+	color: var(--mainfontcolor);
+}
+
+#settings_name {
+    font-size: 1.9em;
+	font-weight: 900;
+	color: var(--mainfontcolor);
+}
+
+#settings_name hr {
+	margin-top: 50px;
+	height: 2px;
+	border: 0;
+    background: var(--mainfontcolor);
+    width: 300px;
+}
+
+.setting {
+    display: flow-root;
+}
+
+.setting .setting_name {
+    font-size: 1.1em;
+    width: 400px;
+}
+
+.mode_switcher {
+	margin: 0 0 20px 0;
+}
+
+.switch {
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+	width: 70px;
+	height: 34px;
+}
+
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgb(255, 0, 0);
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider {
+	background-color: #00db12;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(35px);
+	-ms-transform: translateX(35px);
+	transform: translateX(35px);
+}
+
+input:disabled + .slider{
+	cursor: not-allowed;
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
